@@ -15,3 +15,4 @@ Special repo which serves MacOS builds for x64 and M1 ARM64, as well as other ar
  \ 
 Another related project I'm trying to share is my ChromiumOS builds with Codecs, Kernel 5.10, firmware, and extra packages > https://github.com/Alex313031/ChromiumOS
 
+<img src="https://github.com/Alex313031/Thorium-AVX2/blob/main/SmallLogo.png">
