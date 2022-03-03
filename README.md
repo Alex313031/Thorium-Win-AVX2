@@ -14,9 +14,8 @@ Main repo that hosts the source code for all platforms and serves linux builds >
 
 Windows repo that serves windows builds (the source code there is out of date and was merged with the main repo above) > https://github.com/Alex313031/Thorium-Win
 
-Special repo which serves MacOS builds for x64 and M1 ARM64, as well as other architectures like ARM32 for the Raspberry Pi, Tigerlake, SSE4, Bulldozer, and experimental Android builds > https://github.com/Alex313031/Thorium-Special
- \ 
- \ 
+Special repo which serves MacOS builds for x64 and M1 ARM64, as well as other architectures like ARM32 for the Raspberry Pi, Tigerlake, SSE4, Bulldozer, and experimental Android builds > https://github.com/Alex313031/Thorium-Special \
+
 Another related project I'm trying to share is my ChromiumOS builds with Codecs, Kernel 5.10, firmware, and extra packages > https://github.com/Alex313031/ChromiumOS
 
 ## Building
