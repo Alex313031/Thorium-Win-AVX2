@@ -18,4 +18,4 @@ Another related project I'm trying to share is my ChromiumOS builds with Codecs,
 <img src="https://github.com/Alex313031/Thorium-AVX2/blob/main/SmallLogo.png">
 
 ## Building
-Follow the building instruction in the main Thorium repo, however copy the 'chrome' directory in this repo over `//chromium/src/` before compiling.
+Follow the building instructions in the main Thorium repo, however copy the 'build' directory in this repo over `//chromium/src/build` after running `./trunk` and `./setup` in the main repo, but of course before compiling.
