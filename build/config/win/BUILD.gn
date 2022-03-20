@@ -170,7 +170,7 @@ config("compiler") {
 
     # Don't look for libpaths in %LIB%, similar to /X in cflags above.
     ldflags += [ "/lldignoreenv" ]
-    ldflags += [ "/opt:lldlto=3", "-mllvm:-march=haswell", "-mllvm:-fp-contract=fast", ]
+    ldflags += [ "/opt:lldlto=3", ]
   }
 
   if (use_large_pdbs) {
