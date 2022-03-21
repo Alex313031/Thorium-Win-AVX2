@@ -129,6 +129,8 @@ config("compiler") {
         "/clang:-mavx",
         "/clang:-maes",
         "/clang:-ffp-contract=fast",
+        "/clang:-O3",
+        "-Xclang", "-O3",
         "-Wno-unused-command-line-argument",
       ]
     }
