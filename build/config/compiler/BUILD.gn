@@ -30,9 +30,6 @@ if (current_cpu == "mipsel" || current_cpu == "mips64el" ||
     current_cpu == "mips" || current_cpu == "mips64") {
   import("//build/config/mips.gni")
 }
-if (current_cpu == "x64") {
-  import("//build/config/x64.gni")
-}
 if (is_mac) {
   import("//build/config/apple/symbols.gni")
 }
@@ -901,7 +898,7 @@ config("compiler_cpu_abi") {
       cflags += [
         "-m64",
         "-march=haswell",
-        "-mtune=x86-64",
+        "-mtune=generic",
       ]
       ldflags += [ "-m64", "-Wl,-mllvm,-march=haswell", "-Wl,-mllvm,-fp-contract=fast", ]
     } else if (current_cpu == "x86") {
