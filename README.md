@@ -20,3 +20,7 @@ Another related project I'm trying to share is my ChromiumOS builds with Codecs,
 
 ## Building
 Follow the building instructions in the main Thorium repo, however copy the 'build' directory in this repo over `//chromium/src/build` after running `./trunk` and `./setup` in the main repo, but of course before compiling.
+
+*Thanks for using Thorium!*
+
+<img src="https://github.com/Alex313031/Thorium/blob/main/logos/STAGING/Thorium90_502.jpg" width="200">
