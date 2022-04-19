@@ -125,6 +125,8 @@ config("compiler") {
     if (current_cpu == "x86" || current_cpu == "x64") {
       cflags += [
         "/arch:AVX2",
+        "/clang:-march=haswell",
+        "/clang:-mtune=generic",
         "/clang:-mavx2",
         "/clang:-mavx",
         "/clang:-maes",
