@@ -893,6 +893,7 @@ config("compiler_cpu_abi") {
       cflags += [
         "-m64",
         "-march=haswell",
+        "-maes",
         "-mtune=generic",
       ]
       ldflags += [ "-m64", "-Wl,-mllvm,-march=haswell", "-Wl,-mllvm,-fp-contract=fast", ]
