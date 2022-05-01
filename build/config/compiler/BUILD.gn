@@ -895,7 +895,7 @@ config("compiler_cpu_abi") {
         "-march=haswell",
         "-mtune=generic",
         "-maes",
-        "-fp-contract=fast",
+        "-ffp-contract=fast",
       ]
       ldflags += [ "-m64", "-Wl,-O3", "-Wl,-mllvm,-march=haswell", "-Wl,-mllvm,-fp-contract=fast", ]
     } else if (current_cpu == "x86") {
