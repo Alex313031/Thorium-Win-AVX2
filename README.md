@@ -1,7 +1,7 @@
 ![GitHub tag (latest SemVer)](https://img.shields.io/github/v/tag/alex313031/thorium-avx2?label=Version%3A) &nbsp;![GitHub](https://img.shields.io/github/license/alex313031/thorium?color=green&label=License%3A) &nbsp;![GitHub commit activity](https://img.shields.io/github/commit-activity/w/alex313031/thorium-avx2?color=blueviolet&label=Commit%20Activity%3A) &nbsp;![Subreddit subscribers](https://img.shields.io/reddit/subreddit-subscribers/ChromiumBrowser?style=social)
 
 # Thorium-AVX2
-## Repo to serve AVX2 builds of Thorium!
+## Repo to serve Windows AVX2 builds of Thorium!
 
 <img src="https://github.com/Alex313031/Thorium-AVX2/blob/main/ThoriumLogo.png">
 
