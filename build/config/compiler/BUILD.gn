@@ -894,7 +894,6 @@ config("compiler_cpu_abi") {
         "-O3",
         "-march=haswell",
         "-mtune=generic",
-        "-maes",
         "-ffp-contract=fast",
       ]
       ldflags += [ "-m64", "-Wl,-O3", "-Wl,-mllvm,-march=haswell", "-Wl,-mllvm,-fp-contract=fast", ]
