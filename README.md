@@ -18,7 +18,7 @@ Special repo which serves MacOS builds for x64 and M1 ARM64, as well as other ar
 
 Another related project I'm trying to share is my ChromiumOS builds with Codecs, Kernel 5.10, firmware, and extra packages > https://github.com/Alex313031/ChromiumOS
 
-## Building <img src="https://github.com/Alex313031/Thorium/blob/main/logos/NEW/build_24.png">
+## Building <img src="https://github.com/Alex313031/Thorium/blob/main/logos/NEW/build_light.svg#gh-dark-mode-only"> <img src="https://github.com/Alex313031/Thorium/blob/main/logos/NEW/build_dark.svg#gh-light-mode-only">
 Follow the building instructions in the main Thorium repo, however copy the 'build' directory in this repo over `//chromium/src/build` after running `./trunk` and `./setup` in the main repo, but of course before compiling.
 
 *Thanks for using Thorium!*
