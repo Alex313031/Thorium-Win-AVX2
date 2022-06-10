@@ -662,11 +662,17 @@ config("compiler") {
     # TODO(gbiv): We ideally shouldn't need to specify this; ThinLTO
     # should be able to better manage binary size increases on its own.
     import_instr_limit = 30
+    
+    import_hot_multiplier = 20
+    
+    import_cold_multiplier = 5
 
     if (is_win) {
       ldflags += [
         "/opt:lldltojobs=all",
         "-mllvm:-import-instr-limit=$import_instr_limit",
+        "-mllvm:-import-hot-multiplier=$import_hot_multiplier",
+        "-mllvm:-import-cold-multiplier=$import_cold_multiplier",
         # "/lldltocache:" +
         #    rebase_path("$root_out_dir/thinlto-cache", root_build_dir),
         # "/lldltocachepolicy:$cache_policy",
@@ -887,7 +893,7 @@ config("thinlto_optimize_max") {
 # tweak code generation for a particular CPU do not belong here!
 # See "compiler_codegen", below.
 config("compiler_cpu_abi") {
-  cflags = []
+  cflags = [ "-O3", ]
   ldflags = []
   defines = []
 
@@ -895,6 +901,13 @@ config("compiler_cpu_abi") {
     # CPU architecture. We may or may not be doing a cross compile now, so for
     # simplicity we always explicitly set the architecture.
     if (current_cpu == "x64") {
+    
+    import_instr_limit = 30
+    
+    import_hot_multiplier = 20
+    
+    import_cold_multiplier = 5
+    
       cflags += [
         "-m64",
         "-O3",
@@ -902,7 +915,7 @@ config("compiler_cpu_abi") {
         "-mtune=generic",
         "-ffp-contract=fast",
       ]
-      ldflags += [ "-m64", "-Wl,-O3", "-Wl,-mllvm,-march=haswell", "-Wl,-mllvm,-fp-contract=fast", ]
+      ldflags += [ "-m64", "-Wl,-O3", "-Wl,-mllvm,-march=haswell", "-Wl,-mllvm,-fp-contract=fast", "-Wl,-mllvm,-import-instr-limit=$import_instr_limit", "-Wl,-mllvm,-import-hot-multiplier=$import_hot_multiplier", "-Wl,-mllvm,-import-cold-multiplier=$import_cold_multiplier", ]
     } else if (current_cpu == "x86") {
       cflags += [ "-m32" ]
       ldflags += [ "-m32" ]
@@ -1951,6 +1964,11 @@ config("no_incompatible_pointer_warnings") {
     "-mllvm", "-interleave-small-loop-scalar-reduction",
     "-mllvm", "-unroll-runtime-multi-exit",
     "-mllvm", "-aggressive-ext-opt",
+    "/O3",
+    "/clang:-O3",
+    "/clang:-mavx2",
+    "/clang:-maes",
+    "-Xclang", "-O3",
   ]
 
   common_optimize_on_ldflags += [
@@ -1997,6 +2015,11 @@ if (is_win) {
     "-mllvm", "-interleave-small-loop-scalar-reduction",
     "-mllvm", "-unroll-runtime-multi-exit",
     "-mllvm", "-aggressive-ext-opt",
+    "/O3",
+    "/clang:-O3",
+    "/clang:-mavx2",
+    "/clang:-maes",
+    "-Xclang", "-O3",
   ]
 
   common_optimize_on_ldflags += [
@@ -2040,6 +2063,7 @@ if (is_win) {
     "-mllvm", "-interleave-small-loop-scalar-reduction",
     "-mllvm", "-unroll-runtime-multi-exit",
     "-mllvm", "-aggressive-ext-opt",
+    "-O3",
   ]
 
   common_optimize_on_ldflags += [
