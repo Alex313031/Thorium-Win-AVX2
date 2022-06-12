@@ -3,7 +3,7 @@
 # Thorium AVX2
 __Repo to serve Windows AVX2 builds of Thorium!__
 
-<img src="https://github.com/Alex313031/Thorium-AVX2/blob/main/ThoriumLogo.png"> <img src="https://github.com/Alex313031/Thorium/blob/main/logos/STAGING/AVX2.png" width="200">
+<img src="https://github.com/Alex313031/Thorium-AVX2/blob/main/ThoriumLogo.png"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="https://github.com/Alex313031/Thorium/blob/main/logos/STAGING/AVX2.png" width="200">
 
  - I made this seperate from my other Thorium repos, to serve AVX2 builds of Thorium and keep them organized and seperated from normal AVX builds.
 This repo will primarily host Windows builds, but occasionally I will also put out an AVX2 linux build. NOTE: To build for AVX2 see Building below.
