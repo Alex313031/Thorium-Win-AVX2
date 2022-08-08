@@ -133,15 +133,16 @@ config("compiler") {
     if (current_cpu == "x86" || current_cpu == "x64") {
       cflags += [
         "/O3",
-        "/arch:AVX2",
+        "-mavx2",
+        "-maes",
+        "/clang:-O3",
+        "/clang:-mavx2",
+        "/clang:-maes",
+        "-Xclang", "-O3",
         "/clang:-march=haswell",
         "/clang:-mtune=generic",
-        "/clang:-mavx2",
-        "/clang:-mavx",
-        "/clang:-maes",
         "/clang:-ffp-contract=fast",
-        "/clang:-O3",
-        "-Xclang", "-O3",
+        "/arch:AVX2",
         "/fp:fast",
         "-Wno-unused-command-line-argument",
       ]
