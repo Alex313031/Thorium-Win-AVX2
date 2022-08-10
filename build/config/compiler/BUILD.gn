@@ -365,7 +365,7 @@ config("compiler") {
   if ((is_posix && !is_apple) || is_fuchsia) {
     if (enable_profiling) {
       if (!is_debug) {
-        cflags += [ "-g0" ]
+        cflags += [ "-g" ]
 
         if (enable_full_stack_frames_for_profiling) {
           cflags += [
@@ -411,7 +411,7 @@ config("compiler") {
       }
     }
   }
-  
+
   # Apple compiler flags setup.
   # ---------------------------------
   if (is_apple) {
@@ -544,7 +544,7 @@ config("compiler") {
       }
     }
   }
-  
+
   # Rust compiler setup (for either clang or rustc).
   if (enable_rust) {
     defines += [ "RUST_ENABLED" ]
@@ -869,7 +869,7 @@ config("compiler_cpu_abi") {
   if ((is_posix && !is_apple) || is_fuchsia) {
     # CPU architecture. We may or may not be doing a cross compile now, so for
     # simplicity we always explicitly set the architecture.
-    if (current_cpu == "x64") {    
+    if (current_cpu == "x64") {
       cflags += [
         "-m64",
         "-O3",
@@ -888,11 +888,16 @@ config("compiler_cpu_abi") {
           "-msse3",
         ]
       }
+    } else if (target_cpu == "arm64") {
+      if (!is_android && !is_nacl) {
+        cflags += [ "-O3", "-Wno-unused-command-line-argument", ]
+        ldflags += [ "-Wl,-O3", "-Wno-unused-command-line-argument", ]
+      }
     } else if (current_cpu == "arm") {
       if (is_clang && !is_android && !is_nacl &&
           !(is_chromeos_lacros && is_chromeos_device)) {
-        cflags += [ "--target=arm-linux-gnueabihf", "-O3", ]
-        ldflags += [ "--target=arm-linux-gnueabihf", "-Wl,-O3", ]
+        cflags += [ "--target=arm-linux-gnueabihf", "-O3", "-Wno-unused-command-line-argument", ]
+        ldflags += [ "--target=arm-linux-gnueabihf", "-Wl,-O3", "-Wno-unused-command-line-argument", ]
       }
       if (!is_nacl) {
         cflags += [
@@ -906,8 +911,8 @@ config("compiler_cpu_abi") {
     } else if (current_cpu == "arm64") {
       if (is_clang && !is_android && !is_nacl && !is_fuchsia &&
           !(is_chromeos_lacros && is_chromeos_device)) {
-        cflags += [ "--target=aarch64-linux-gnu", "-O3", ]
-        ldflags += [ "--target=aarch64-linux-gnu", "-Wl,-O3", ]
+        cflags += [ "--target=aarch64-linux-gnu", "-O3", "-Wno-unused-command-line-argument", ]
+        ldflags += [ "--target=aarch64-linux-gnu", "-Wl,-O3", "-Wno-unused-command-line-argument", ]
       }
       if (is_android) {
         # Outline atomics crash on Exynos 9810. http://crbug.com/1272795
@@ -919,10 +924,10 @@ config("compiler_cpu_abi") {
       if (custom_toolchain == "") {
         if (is_clang) {
           if (is_android) {
-            cflags += [ "--target=mipsel-linux-android" ]
+            cflags += [ "--target=mipsel-linux-android", "-O3", ]
             ldflags += [ "--target=mipsel-linux-android" ]
           } else {
-            cflags += [ "--target=mipsel-linux-gnu" ]
+            cflags += [ "--target=mipsel-linux-gnu", "-O3", ]
             ldflags += [ "--target=mipsel-linux-gnu" ]
           }
         } else {
@@ -1523,7 +1528,7 @@ config("default_warnings") {
         # TODO(thakis): Only for no_chromium_code? http://crbug.com/912662
         "-Wno-ignored-pragma-optimize",
       ]
-      
+
       if (!is_nacl) {
         cflags += [
           # TODO(https://crbug.com/1300731) Clean up and enable.
@@ -2383,7 +2388,7 @@ config("symbols") {
       cflags += [ "-gcodeview-ghash" ]
       ldflags = [ "/DEBUG:GHASH" ]
     } else {
-      ldflags = [ "/DEBUG:NONE" ]
+      ldflags = [ "/DEBUG" ]
     }
 
     # All configs using /DEBUG should include this:
@@ -2417,7 +2422,7 @@ config("symbols") {
     # flag, so we can use use -g1 for pnacl and nacl-clang compiles.
     # gcc nacl is is_nacl && !is_clang, pnacl and nacl-clang are && is_clang.
     if ((!is_nacl || is_clang) && current_os != "zos") {
-      cflags += [ "-g0" ]
+      cflags += [ "-g2" ]
     }
 
     if (!is_nacl && is_clang && !is_tsan && !is_asan) {
@@ -2434,7 +2439,7 @@ config("symbols") {
     }
 
     if (is_apple) {
-      swiftflags = [ "-g0" ]
+      swiftflags = [ "-g" ]
     }
 
     if (use_debug_fission) {
@@ -2505,7 +2510,7 @@ config("minimal_symbols") {
       cflags += [ "-gcodeview-ghash" ]
       ldflags = [ "/DEBUG:GHASH" ]
     } else {
-      ldflags = [ "/DEBUG:NONE" ]
+      ldflags = [ "/DEBUG" ]
     }
 
     # All configs using /DEBUG should include this:
@@ -2541,7 +2546,7 @@ config("minimal_symbols") {
     # flag, so we can use use -g1 for pnacl and nacl-clang compiles.
     # gcc nacl is is_nacl && !is_clang, pnacl and nacl-clang are && is_clang.
     if (!is_nacl || is_clang) {
-      cflags += [ "-g0" ]
+      cflags += [ "-g1" ]
     }
 
     if (!is_nacl && is_clang && !is_tsan && !is_asan) {
