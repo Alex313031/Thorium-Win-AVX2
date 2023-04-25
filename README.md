@@ -1,7 +1,8 @@
 ![GitHub tag (latest SemVer)](https://img.shields.io/github/v/tag/alex313031/thorium-avx2?label=Version%3A) &nbsp;![GitHub](https://img.shields.io/github/license/alex313031/thorium?color=green&label=License%3A) &nbsp;![GitHub commit activity](https://img.shields.io/github/commit-activity/w/alex313031/thorium-avx2?color=blueviolet&label=Commit%20Activity%3A) &nbsp;![Subreddit subscribers](https://img.shields.io/reddit/subreddit-subscribers/ChromiumBrowser?style=social)
 
 # Thorium AVX2
-__Repo to serve Windows AVX2 ([most Intel/AMD CPUs since 2017](https://en.wikipedia.org/wiki/Advanced_Vector_Extensions#CPUs_with_AVX2)) builds of Thorium!__
+__Repo to serve Windows AVX2 ([most Intel/AMD CPUs since 2017](https://en.wikipedia.org/wiki/Advanced_Vector_Extensions#CPUs_with_AVX2)) builds of Thorium!__ \
+__*IMPORTANT: PLEASE USE THE NEW WINDOWS 7/8 REPO HERE FOR WINDOWS 7/8/8.1 RELEASES* > https://github.com/Alex313031/thorium-win7__ 
 
 <img src="https://github.com/Alex313031/Thorium-AVX2/blob/main/ThoriumLogo.png"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="https://github.com/Alex313031/Thorium/blob/main/logos/STAGING/AVX2.png" width="200">
 
