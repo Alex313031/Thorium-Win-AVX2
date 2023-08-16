@@ -2,6 +2,7 @@
 
 # Thorium AVX2
 __Repo to serve Windows AVX2 ([most Intel/AMD CPUs since 2017](https://en.wikipedia.org/wiki/Advanced_Vector_Extensions#CPUs_with_AVX2)) builds of Thorium!__ \
+__*NEW!* Linux builds are here > https://github.com/Alex313031/Thorium-Linux-AVX2__ \
 __*IMPORTANT: PLEASE USE THE NEW WINDOWS 7/8 REPO HERE FOR WINDOWS 7/8/8.1 RELEASES* > https://github.com/Alex313031/thorium-win7__ 
 
 <img src="https://github.com/Alex313031/Thorium-AVX2/blob/main/ThoriumLogo.png"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="https://github.com/Alex313031/Thorium/blob/main/logos/STAGING/AVX2.png" width="200">
