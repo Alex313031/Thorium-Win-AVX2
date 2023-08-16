@@ -26,7 +26,7 @@ Special repo which serves builds for SSE3, SSE4, and 32 bit builds are here > ht
 Another related project I'm trying to share is my ChromiumOS builds with Codecs, Kernel 5.10, firmware, and extra packages > https://github.com/Alex313031/ChromiumOS
 
 ## Building <img src="https://github.com/Alex313031/Thorium/blob/main/logos/NEW/build_light.svg#gh-dark-mode-only"> <img src="https://github.com/Alex313031/Thorium/blob/main/logos/NEW/build_dark.svg#gh-light-mode-only">
-For building yourself, follow instructions at [WIN_INSTRUCTIONS](https://github.com/Alex313031/thorium/blob/main/docs/BUILDING_WIN.md) (if building natively on Windows), OR [WIN_CROSS_BUILD_INSTRUCTIONS](https://github.com/Alex313031/thorium/blob/main/docs/BUILDING_WIN_CROSS.md) (if cross building for Windows on Linux).
+For building yourself, follow instructions at [BUILDING_WIN.md](https://github.com/Alex313031/thorium/blob/main/docs/BUILDING_WIN.md) (if building natively on Windows), OR [BUILDING_WIN_CROSS.md](https://github.com/Alex313031/thorium/blob/main/docs/BUILDING_WIN_CROSS.md) (if cross building for Windows on Linux).
 
 *Thanks for using Thorium!*
 
