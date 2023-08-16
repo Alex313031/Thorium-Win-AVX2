@@ -1,14 +1,11 @@
 ![GitHub tag (latest SemVer)](https://img.shields.io/github/v/tag/alex313031/thorium-win-avx2?label=Version%3A) &nbsp;![GitHub](https://img.shields.io/github/license/alex313031/thorium-win-avx2?color=green&label=License%3A) &nbsp;![GitHub commit activity](https://img.shields.io/github/commit-activity/w/alex313031/thorium?color=blueviolet&label=Commit%20Activity%3A) &nbsp;![Subreddit subscribers](https://img.shields.io/reddit/subreddit-subscribers/ChromiumBrowser?style=social)
 
-# Thorium AVX2
+# Thorium AVX2 for Windows
 __Repo to serve Windows AVX2 ([most Intel/AMD CPUs since 2017](https://en.wikipedia.org/wiki/Advanced_Vector_Extensions#CPUs_with_AVX2)) builds of Thorium!__ \
 __*NEW!* Linux builds are here > https://github.com/Alex313031/Thorium-Linux-AVX2__ \
 __*IMPORTANT: PLEASE USE THE NEW WINDOWS 7/8 REPO HERE FOR WINDOWS 7/8/8.1 RELEASES* > https://github.com/Alex313031/thorium-win7__ 
 
 <img src="https://github.com/Alex313031/Thorium-AVX2/blob/main/ThoriumLogo.png"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="https://github.com/Alex313031/Thorium/blob/main/logos/STAGING/AVX2.png" width="200">
-
- - I made this seperate from my other Thorium repos, to serve AVX2 builds of Thorium and keep them organized and seperated from normal AVX builds.
-This repo will primarily host Windows builds, but occasionally I will also put out an AVX2 linux build. NOTE: To build for AVX2 see Building below.
 
 The other Thorium repos :
 
@@ -16,12 +13,20 @@ Main repo that hosts the source code for all platforms and serves linux builds >
 
 Windows repo that serves windows builds (the source code there is out of date and was merged with the main repo above) > https://github.com/Alex313031/Thorium-Win
 
-Special repo which serves MacOS builds for x64 and M1 ARM64, as well as other architectures like ARM32 for the Raspberry Pi, Tigerlake, SSE4, Bulldozer, and experimental Android builds > https://github.com/Alex313031/Thorium-Special \
+MacOS builds for x64 and M1 ARM64 are here > https://github.com/Alex313031/Thorium-MacOS \
+
+Android builds for ARM32 and ARM64 are here > https://github.com/Alex313031/Thorium-Android \
+
+Raspberry Pi (ARM64) builds are here > https://github.com/Alex313031/Thorium-Raspi \
+
+Builds for Windows 7/8/8.1 are here > https://github.com/Alex313031/thorium-win7 \
+
+Special repo which serves builds for SSE3, SSE4, and 32 bit builds are here > https://github.com/Alex313031/Thorium-Special \
 
 Another related project I'm trying to share is my ChromiumOS builds with Codecs, Kernel 5.10, firmware, and extra packages > https://github.com/Alex313031/ChromiumOS
 
 ## Building <img src="https://github.com/Alex313031/Thorium/blob/main/logos/NEW/build_light.svg#gh-dark-mode-only"> <img src="https://github.com/Alex313031/Thorium/blob/main/logos/NEW/build_dark.svg#gh-light-mode-only">
-For building yourself, follow instructions at [WIN_INSTRUCTIONS](https://github.com/Alex313031/Thorium/blob/main/docs/WIN_INSTRUCTIONS.txt) (if building natively on Windows), OR [WIN_CROSS_BUILD_INSTRUCTIONS](https://github.com/Alex313031/Thorium/blob/main/docs/WIN_CROSS_BUILD_INSTRUCTIONS.txt) (if cross building for Windows on Linux).
+For building yourself, follow instructions at [WIN_INSTRUCTIONS](https://github.com/Alex313031/thorium/blob/main/docs/BUILDING_WIN.md) (if building natively on Windows), OR [WIN_CROSS_BUILD_INSTRUCTIONS](https://github.com/Alex313031/thorium/blob/main/docs/BUILDING_WIN_CROSS.md) (if cross building for Windows on Linux).
 
 *Thanks for using Thorium!*
 
