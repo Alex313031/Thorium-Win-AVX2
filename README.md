@@ -5,13 +5,13 @@ __Repo to serve Windows AVX2 ([most Intel/AMD CPUs since 2017](https://en.wikipe
 __*NEW!* Linux builds are here > https://github.com/Alex313031/Thorium-Linux-AVX2__ \
 __*IMPORTANT: PLEASE USE THE NEW WINDOWS 7/8 REPO HERE FOR WINDOWS 7/8/8.1 RELEASES* > https://github.com/Alex313031/thorium-win7__ 
 
-<img src="https://github.com/Alex313031/Thorium-AVX2/blob/main/ThoriumLogo.png"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="https://github.com/Alex313031/Thorium/blob/main/logos/STAGING/AVX2.png" width="200">
+<img src="https://github.com/Alex313031/Thorium-Win-AVX2/blob/main/ThoriumLogo.png"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="https://github.com/Alex313031/Thorium/blob/main/logos/STAGING/AVX2.png" width="200">
 
 The other Thorium repos :
 
 Main repo that hosts the source code for all platforms and serves linux builds > https://github.com/Alex313031/Thorium
 
-Windows repo that serves windows builds (the source code there is out of date and was merged with the main repo above) > https://github.com/Alex313031/Thorium-Win
+Windows repo that serves regular (AVX) Windows builds (the source code there is out of date and was merged with the main repo above) > https://github.com/Alex313031/Thorium-Win
 
 MacOS builds for x64 and M1 ARM64 are here > https://github.com/Alex313031/Thorium-MacOS \
 
@@ -23,7 +23,7 @@ Builds for Windows 7/8/8.1 are here > https://github.com/Alex313031/thorium-win7
 
 Special repo which serves builds for SSE3, SSE4, and 32 bit builds are here > https://github.com/Alex313031/Thorium-Special \
 
-Another related project I'm trying to share is my ChromiumOS builds with Codecs, Kernel 5.10, firmware, and extra packages > https://github.com/Alex313031/ChromiumOS
+Another related project I'm trying to share is ThoriumOS : ChromiumOS builds with Thorium, Widevine, Google Sync, Google Drive, Kernel 5.15, firmware, and extra packages > https://github.com/Alex313031/ThoriumOS
 
 ## Building <img src="https://github.com/Alex313031/Thorium/blob/main/logos/NEW/build_light.svg#gh-dark-mode-only"> <img src="https://github.com/Alex313031/Thorium/blob/main/logos/NEW/build_dark.svg#gh-light-mode-only">
 For building yourself, follow instructions at [BUILDING_WIN.md](https://github.com/Alex313031/thorium/blob/main/docs/BUILDING_WIN.md) (if building natively on Windows), OR [BUILDING_WIN_CROSS.md](https://github.com/Alex313031/thorium/blob/main/docs/BUILDING_WIN_CROSS.md) (if cross building for Windows on Linux).
